@@ -28,8 +28,9 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-   
-//__________________________________________________________________________
+//________________________________________________________________________//   
+//             Movimentação das peças para o nível novato                 //
+//________________________________________________________________________//
 
 //movimentação da torre
 int a=1; // variável de controle do loop
@@ -49,7 +50,7 @@ printf("__________________________________________\n");
    
 //movimentação da Rainha
 for(int c=1; c<=8 ; c++){
-    printf("Movimento %d. Rainha moveu-se uma casa para a Esquerda\n");
+    printf("Movimento %d. Rainha moveu-se uma casa para a Esquerda\n", c);
 }
 printf("__________________________________________\n");
 
