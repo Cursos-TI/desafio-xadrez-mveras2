@@ -32,27 +32,69 @@ int main() {
 //             Movimentação das peças para o nível novato                 //
 //________________________________________________________________________//
 
-//movimentação da torre
-int a=1; // variável de controle do loop
-while (a<=5){
-    printf("Movimento %d. Torre moveu-se uma casa para a Direita\n", a);
-    a++;
-}
-printf("__________________________________________\n");
+int i, selecao; 
 
-//movimentação do Bispo
-int b=1; // variável de controle do loop
-do{
-    printf("Movimento %d. Bispo moveu-se uma casa para Cima e uma para a Direita\n", b);
-    b++;
-} while (b<=5);
-printf("__________________________________________\n");
-   
-//movimentação da Rainha
-for(int c=1; c<=8 ; c++){
-    printf("Movimento %d. Rainha moveu-se uma casa para a Esquerda\n", c);
-}
-printf("__________________________________________\n");
+printf("//____________________________________________________________________//\n");
+printf("//Escolha o número da peça que vc deseja conferir o deslocamento:     //\n");
+printf("//1 - Torre                                                           //\n");
+printf("//2 - Bispo                                                           //\n");
+printf("//3 - Rainha                                                          //\n");
+printf("//4 - Cavalo                                                          //\n");
+printf("//____________________________________________________________________//\n");
+scanf("%d", &i);
 
-    return 0;
+switch (selecao = i)
+{
+case 1:{
+    //movimentação da torre
+    int a=1; // variável de controle do loop
+    while (a<=5){
+        printf("Movimento %d. Torre moveu-se uma casa para à Direita\n", a);
+        a++;
+    }
+    printf("__________________________________________\n");
+    break;
+}
+    case 2:{
+    //movimentação do Bispo
+    int b=1; // variável de controle do loop
+    do{
+        printf("Diagonal %d. Bispo moveu-se uma casa para Cima e uma para a Direita\n", b);
+        b++;
+    } while (b<=5);
+    printf("__________________________________________\n");
+break;
+}
+case 3:{
+    //movimentação da Rainha
+    for(int c=1; c<=8 ; c++){
+        printf("Movimento %d. Rainha moveu-se uma casa à Esquerda\n", c);
+    }
+    printf("__________________________________________\n");
+break;
+}
+case 4:{
+    //________________________________________________________________________//   
+    //             Movimentação das peças para o nível Aventureiro            //
+    //________________________________________________________________________//
+
+    //movimentação do cavalo
+    // Usar loops aninhados, sendo pelo menos um "for".
+    int e=1;
+    for (int d=1; d<=1; d++){
+        while(e<=2){
+            printf("Movimento %d: Cavalo moveu-se uma casa para baixo\n", e);
+            e++;
+        }
+        printf("Movimento %d: Cavalo moveu-se uma casa à Esquerda\n", d + e-1);
+        printf("__________________________________________\n");
+    }
+break;
+}
+default:
+printf("Entrada incorreta!");
+break;
+}
+
+return 0;
 }
